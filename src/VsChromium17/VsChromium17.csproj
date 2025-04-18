@@ -102,7 +102,8 @@
     <Content Include="$(OutputPath)\VsChromium.vsdconfig">
       <Link>VsChromium.vsdconfig</Link>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <IncludeInVSIX>false</IncludeInVSIX> <!-- Included through vsixmanifest already. -->
+      <IncludeInVSIX>false</IncludeInVSIX>
+      <!-- Included through vsixmanifest already. -->
     </Content>
     <Content Include="$(BuildRoot)src\DkmIntegration\Visualizers\Visualizers.natvis">
       <Link>Visualizers.natvis</Link>
@@ -177,6 +178,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="MessagePack">
+      <Version>3.1.3</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.SDK" Version="17.0.31902.203" ExcludeAssets="runtime" />
     <PackageReference Include="Microsoft.VisualStudio.Shell.15.0" Version="17.0.31902.203" />
     <PackageReference Include="Microsoft.VSSDK.BuildTools" Version="17.0.5233" />
